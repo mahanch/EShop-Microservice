@@ -1,4 +1,6 @@
-﻿
+﻿using Carter;
+using Mapster;
+using MediatR;
 
 namespace Catalog.Api.Products.CreateProduct;
 
@@ -16,6 +18,7 @@ public class CreateProductEndpoint:ICarterModule
 	{
 		app.MapPost("/products", async (CreateProductRequest request, ISender sender) =>
 		{
+			var command = request.Adapt<CreateProductCommand>();
 
 		}).WithName("CreateProduct")
 		.Produces<CreateProductResponse>(StatusCodes.Status201Created)
