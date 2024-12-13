@@ -20,4 +20,9 @@
     <ProjectReference Include="..\..\..\BuildingBlock\BuildingBlock.csproj\BuildingBlock.csproj.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Exception\" />
+    <Folder Include="Products\GetProductById\" />
+  </ItemGroup>
+
 </Project>
